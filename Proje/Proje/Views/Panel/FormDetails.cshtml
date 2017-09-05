@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "FormDetails";
+}
+
+@model Proje.Models.Form
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+                margin: 0;
+                padding: 0;
+        }
+
+          body {
+                font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+                background: #EEE;
+        }
+table {
+width: 600px;
+margin: 200px auto;
+table-layout: auto;
+align:left;
+border-collapse: collapse;
+
+}
+
+ tr:nth-child(odd) {
+    background: #DDD;
+  }
+th {
+                padding: 8px;
+                background: #0DD;
+        }
+    </style>
+</head>
+<body>
+    <h3>Form Detay Sayfası</h3>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Form Dolduran Kişinin Detaylı Bilgileri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ad  </td>
+                        <td>@Model.userName</td>
+                    </tr>
+                    <tr>
+                        <td>Soyad  </td>
+                        <td>@Model.userSurname</td>
+                    </tr>
+                    <tr>
+                        <td>Cinsiyet  </td>
+                        <td>@Model.userGender</td>
+                    </tr>
+                    <tr>
+                        <td>Doğum Günü  </td>
+                        <td>@Model.userBirthday</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon Numarası  </td>
+                        <td>@Model.userTel</td>
+                    </tr>
+                    <tr>
+                        <td>Okul Adı  </td>
+                        <td>@Model.userSchoolName</td>
+                    </tr>
+                    <tr>
+                        <td>Okulun Bitiş Yılı  </td>
+                        <td>@Model.userSchoolEndYear</td>
+                    </tr>
+                    <tr>
+                        <td>Mail Adresi  </td>
+                        <td>@Model.userMail</td>
+                    </tr>
+                    <tr>
+                        <td>Yanıtlanacak cevap :</td>
+                        <td><textarea>@Model.yetkiliMessage</textarea></td>
+                        <td><button type="submit" value="Yanitla">Yanıtla</button></td>
+                    </tr>
+                </tbody>
+            </table>
+</body>
+</html>

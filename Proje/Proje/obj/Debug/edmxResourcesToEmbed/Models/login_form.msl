@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjeModelStoreContainer" CdmEntityContainer="ProjeEntities1">
+    <EntitySetMapping Name="Forms">
+      <EntityTypeMapping TypeName="ProjeModel.Form">
+        <MappingFragment StoreEntitySet="Form">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userSurname" ColumnName="userSurname" />
+          <ScalarProperty Name="userBirthday" ColumnName="userBirthday" />
+          <ScalarProperty Name="userGender" ColumnName="userGender" />
+          <ScalarProperty Name="userTel" ColumnName="userTel" />
+          <ScalarProperty Name="userSchoolName" ColumnName="userSchoolName" />
+          <ScalarProperty Name="userSchoolEndYear" ColumnName="userSchoolEndYear" />
+          <ScalarProperty Name="userGrade" ColumnName="userGrade" />
+          <ScalarProperty Name="userMail" ColumnName="userMail" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userSubject" ColumnName="userSubject" />
+          <ScalarProperty Name="userMessage" ColumnName="userMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="ProjeModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="yetkili_id" ColumnName="yetkili_id" />
+          <ScalarProperty Name="yetkili_name" ColumnName="yetkili_name" />
+          <ScalarProperty Name="yetkili_password" ColumnName="yetkili_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

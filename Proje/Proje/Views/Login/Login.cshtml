@@ -1,0 +1,88 @@
+﻿@model Proje.Models.Login
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <h3 align="right">Yetkili Panel Girişi</h3>
+    <style>
+        .button {
+            background-color: blueviolet;
+            border: none;
+            color: white;
+            padding: 5px 17px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img alt="Logo" src="~/img/logo.png" height="500px;" width="550px;">
+        </div>
+        <div class="col-md-6">
+            
+            @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
+            {
+                <table align="center">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                        
+                    </tr>
+                    <tr>                       
+                        <td><b>Kullanıcı Adı  </b></td>
+                        <td>
+                            @Html.EditorFor(model => model.yetkili_name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br /> </td>
+                        <td>@Html.ValidationMessageFor(model => model.yetkili_name)</td>
+
+                    </tr>
+                    <tr>
+                        <td><b>Şifre  </b></td>
+                        <td>@Html.PasswordFor(model => model.yetkili_password)</td>
+                    </tr>
+                    <tr>
+                        <td><br /> </td>
+                        <td>@Html.ValidationMessageFor(model => model.yetkili_password)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="button"><a value="Login">Giriş Yap</a></button>
+                        </td>
+                        <td>
+                            <button class="button"><a value="Mail">Temizle</a></button>
+                        </td>
+                    </tr>
+                </table>
+            }
+
+        </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Form">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userBirthday" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userGender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userSchoolName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userSchoolEndYear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="yetkili_id" />
+    </Key>
+    <Property Name="yetkili_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yetkili_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="yetkili_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ProjeEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Forms" EntityType="Self.Form" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+  </EntityContainer>
+</Schema>

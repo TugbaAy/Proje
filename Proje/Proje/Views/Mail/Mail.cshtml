@@ -1,0 +1,98 @@
+﻿@model Proje.Models.Form
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <h3 align="right">İş Başvuru Formu</h3>
+    <style>
+        .button {
+            background-color: blueviolet;
+            border: none;
+            color: white;
+            padding: 5px 17px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 50%;
+        }
+        th, td {
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+   <div class="col-lg-8" background="white">
+        <img alt="Logo" src="~/img/logo.png" height="500px;" width="550px;">
+    </div>
+   <div class="col-lg-4">
+      @using (Html.BeginForm("Mail", "Mail", FormMethod.Post))
+      {
+          <table align="left">
+          <tr><td><b>Mail Adresinizi Giriniz    </b></td>
+              <td>@Html.EditorFor(model => model.userMail)</td>
+          </tr>
+              <br/>
+          <tr><td><b>Mail Şifrenizi Giriniz    </b></td>
+              <td>@Html.PasswordFor(model => model.userPassword)</td>
+          </tr>
+          <tr><td><b>Mail Konusu  </b></td>
+              <td>@Html.EditorFor(model => model.userSubject)</td>
+          </tr>
+              <tr>
+                  <td><b>Mesaj </b></td>
+                  <td>@Html.EditorFor(model => model.userMessage)</td>
+              </tr>
+              <tr>
+                  <td><b>Ad  </b></td>
+                  <td>@Html.EditorFor(model => model.userName)</td>
+              </tr>
+              <tr>
+                  <td><b>Soyad </b></td>
+                  <td>@Html.EditorFor(model => model.userSurname)</td>
+              </tr>
+              <tr>
+                  <td><b>Doğum Günü   </b></td>
+                  <td>@Html.EditorFor(model => model.userBirthday)</td>
+              </tr>
+              <tr>
+                  <td><b>Cinsiyet  </b></td>
+                  <td>@Html.EditorFor(model => model.userGender)</td>
+              </tr>
+
+              <tr>
+                  <td><b>Telefon Numarası  </b></td>
+                  <td>@Html.EditorFor(model => model.userTel)</td>
+              </tr>
+              <tr>
+                  <td><b>Okul Adı  </b></td>
+                  <td>@Html.EditorFor(model => model.userSchoolName)</td>
+
+              </tr>
+              <tr>
+                  <td><b>Okul Bitiş Yılı   </b></td>
+                  <td>@Html.EditorFor(model => model.userSchoolEndYear)</td>
+              </tr>
+              <tr>
+                  <td><b>Ortalama   </b></td>
+                  <td>@Html.EditorFor(model => model.userGrade)</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td>
+                      <button class="button"><a value="Mail">Mail Gönder</a></button>
+                  </td>
+              </tr>
+          </table>
+            }
+        </div>
+
+        </div>
+</body>
+</html>
